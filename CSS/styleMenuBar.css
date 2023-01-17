@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    
+}
+.container {
+    width: 100%;
+}
+.container .menu{
+    width:  100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container .menu ul{
+    display: flex;
+    list-style: none;
+    width:  100%;
+    /* align-items: flex-end; */
+    justify-content: center;
+    background-color: aqua;
+    
+}
+.container .menu ul li{
+    display: flex;
+    
+    align-items: center;
+    
+}
+.container .menu ul li a{
+    text-decoration: none;
+    padding: 22px 20px;
+}
+.container .menu ul li a:hover{
+    background-color: black;
+}

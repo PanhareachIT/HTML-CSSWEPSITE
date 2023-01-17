@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    max-width: 75%;
+    margin: auto;
+    padding: 10px;
+    background-color: wheat;
+}
+.container .header h1{
+    text-align: center;
+}
+
+.container .product-carts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.container .product-carts .carts{
+    width: 300px;
+    height: 420px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+.container .product-carts .carts .image{
+    width: 100%;
+    height: 60%;
+}
+.container .product-carts .carts .image img{
+    width: 100%;
+    height: 100%;
+}
+.container .product-carts .carts .content{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+}
+.container .product-carts .carts .content .title{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px;
+}
+.container .product-carts .carts .content .price{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.container .product-carts .carts .content .description{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.container .product-carts .carts .content .add-to-card{
+    background-color: red;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+}
+.container .product-carts .carts .content .detail{
+    background-color: red;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+}

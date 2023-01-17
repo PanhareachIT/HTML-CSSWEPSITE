@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/review2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo"><a href="">Cambodia</a></div>
+        <div class="nav_responsive">
+          <ul class="nav_center">
+            <li><a href="">Home</a></li>
+            <li><a href="#Capital">Capital</a></li>
+            <li><a href="#city">City</a></li>
+            <li><a href="">Province</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="nav_right">
+            <div class="input_box">
+              <input type="text" placeholder="Search......." />
+              <i class="fa-regular fa-user-magnifying-glass"></i>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+            </div>
+            <i class="fa-regular fa-user"></i>
+          </div>
+        </div>
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="img_bg">
+        <div class="model">
+          <h1>WellCome to Cambodia</h1>
+          <h2>Kingdom of Wonder</h2>
+          <p>
+            Angkow Wat is a temple complex in cambodia and the largest monument
+            religious in the world
+          </p>
+          <a href="#">HELLO</a>
+        </div>
+      </div>
+      <section>
+        <section class="capital" id="Capital">
+          <div class="title">
+            <div class="title_capital">Capital</div>
+            <div class="line"></div>
+          </div>
+          <div class="detail">
+            <div class="detail_title">Phnom Penh</div>
+            <img src="./Image/pagoda.jpg" alt="" />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quibusdam ratione illo totam soluta sequi similique ducimus
+              suscipit, molestiae ipsa unde odio eveniet maiores veritatis nam
+              vero consequatur tempora assumenda quo?Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Eos officiis possimus quis eaque eum
+              reiciendis? Placeat error atque ipsum beatae assumenda
+              consequuntur debitis neque libero, laborum officia quibusdam
+              perferendis dolores.
+            </p>
+            <a href="">See more</a>
+          </div>
+        </section>
+        <section class="city" id="city">
+          <div class="title">
+            <div class="city_title">City</div>
+            <div class="line"></div>
+          </div>
+          <div class="detail">
+            <div class="contain_city">
+              <div class="title_detail">Krong Siem Reap</div>
+              <img src="./Image/old-school.jpg" alt="" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi, quis quae? Pariatur, fugiat reprehenderit quae
+                praesentium quaerat consectetur eligendi exercitationem hic
+                magnam minus, est perferendis soluta quasi odio ratione
+                mollitia. Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Labore fuga in corrupti eos iure voluptate minima alias
+                qui blanditiis possimus, nihil id aliquid sunt quas veniam
+                officia assumenda incidunt distinctio.
+              </p>
+              <a href="">See more</a>
+            </div>
+            <div class="contain_city">
+              <div class="title_detail">Krong Siem Reap</div>
+              <img src="./Image/old-school.jpg" alt="" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi, quis quae? Pariatur, fugiat reprehenderit quae
+                praesentium quaerat consectetur eligendi exercitationem hic
+                magnam minus, est perferendis soluta quasi odio ratione
+                mollitia. Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Labore fuga in corrupti eos iure voluptate minima alias
+                qui blanditiis possimus, nihil id aliquid sunt quas veniam
+                officia assumenda incidunt distinctio.
+              </p>
+              <a href="">See more</a>
+            </div>
+          </div>
+        </section>
+        <section class="contact" id="contact">
+          <div class="contact_title">
+            <div class="title">Contact</div>
+            <div class="line"></div>
+          </div>
+          <div class="contact_detail">
+            <form action="">
+              <input type="text" placeholder="Full Name" />
+              <input type="text" placeholder="E-mail" />
+              <input type="text" placeholder="Phone Number" />
+              <textarea
+                name=""
+                id=""
+                cols=""
+                rows="20"
+                placeholder="Your message"
+              ></textarea>
+              <div class="btn">
+                <a href="">Submit</a>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="footer">
+          <div class="socail_icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+          <ul class="nav_footer">
+            <li><a href="#Capital">Home</a></li>
+            <li><a href="">Capital</a></li>
+            <li><a href="">City</a></li>
+            <li><a href="">Province</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </section>
+      </section>
+    </div>
+    <script>
+      const nav_res = document.querySelector(".nav_responsive");
+      const ham = document.querySelector(".hamburger");
+
+      ham.addEventListener("click", function (e) {
+        nav_res.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,492 @@
+:root {
+    --white: var(--white);
+    --color-dark: #333;
+    --color-light: #fff;
+    --color-light-2: rgba(255, 255, 255, 0.8);
+    --color-light-3: rgba(255, 255, 255, 0.6);
+    --bg-header: #161616;
+    --bg-nav: #fa1939;
+    --bg-nav-active: #d90c16;
+    --txt-nav-shadow: 1px 1px 1px rgb(0 0 0 / 40%);
+    --color-danger: #f2272f;
+    --color-pink: #fa5480;
+    --color-primary: #4390f8;
+    --color-success: #38c378;
+    --color-warning: #f9a62b;
+    --color-secondary: #555555;
+    --linear-gradient-overlay: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.8) 60%,
+      black 100%
+    );
+    --logo-size: 80px;
+    --default-font-family: "Koulen", Arial, Helvetica, sans-serif;
+    --second-font-family: "Battambang", cursive;
+    --default-transition: all 0.2s linear;
+    --box-content-shadow: 1px 2px 2px 1px rgb(0 0 0 / 20%);
+    --default-scale-in: scale(0.98);
+  }
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container_fluid{
+    width: 100%;
+    height: 500vh;
+    background-color: wheat;
+}
+.container_fluid .header {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.container_fluid .header .content
+{
+    background-color: azure;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.container_fluid .header .content .logo .a{
+    width: 70px;
+    padding: 15px;
+}
+.container_fluid .nav 
+{
+    width: 100%;
+    display: flex;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_fluid .nav .content{
+    width: 70%;
+
+}
+.container_fluid .nav .content ul{
+    display: flex;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.container_fluid .nav .content ul li a{
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.container_fluid .container{
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.container_fluid .container .content{
+    width: 70%;
+    display: flex;
+    gap: 10px;
+    
+}
+.container_fluid .container .content .content_left{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(2, 240px);
+}
+.container_fluid .container .content .content_right{
+    width: 30%;
+    display: grid;
+    grid-template-columns:1;
+    grid-template-rows: repeat(2, 240px);
+    
+}
+.container_fluid .container .content .content_left a{
+    position: relative;
+}
+.container_fluid .container .content .content_left a .flag{
+    position: absolute;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 5px;
+    background-color: cyan;
+}
+
+.container_fluid .container .content .content_left a:nth-child(2) .flag,
+.container_fluid .container .content .content_left a:nth-child(3) .flag{
+    background-color: pink;
+}
+.container_fluid .container .content .content_left a .flag::after
+{
+    content: "";
+    top: 0;
+    margin-left: 10px;
+    /* margin-right: -16px; */
+    position: absolute;
+    border-style: solid;
+    border-color: transparent transparent transparent cyan;
+    border-width: 31.5px 0px 0px 20px;
+}
+.container_fluid .container .content .content_left a:nth-child(2) .flag::after,
+.container_fluid .container .content .content_left a:nth-child(3) .flag::after{
+    border-color: transparent transparent transparent pink;
+}
+.container_fluid .container .content .content_left a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container_fluid .container .content .content_left a .text_content{
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    bottom: 20%;
+    transition: all 0.2s linear;
+    
+}
+.container_fluid .container .content .content_left a .opacity{
+    width: 100%;
+    height: 100%;
+    background: var(--linear-gradient-overlay);
+    opacity: 0.5;
+    position: absolute;
+}
+.container_fluid .container .content .content_left a:hover .opacity{
+    opacity: 1;
+}
+.container_fluid .container .content .content_left a:hover .text_content{
+    bottom: 30%;
+    transition: all 4s liner;
+}
+.container_fluid .container .content .content_left a .text_content .title{
+    margin-bottom: 5px;
+    color: white;
+}
+.container_fluid .container .content .content_left a .time{
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    left: 10px;
+}
+.container_fluid .container .content .content_left a .text_content .description{
+    width: 100%;
+    position: absolute;
+    /* left: 10px;
+    bottom: 20%; */
+    visibility: hidden;
+    color: white;
+    transition: all 4s liner;
+    transition: var(--default-transition);
+}
+.container_fluid .container .content .content_left a:hover .text_content .description{
+    visibility: visible;
+    /* color: white; */
+}
+/* .container_fluid .container .content .content_left a  .text_content .title{
+    position: absolute;
+    bottom: 40%;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+}
+.container_fluid .container .content .content_left a .time{
+    position: absolute;
+    bottom: 5%;
+    left: 10px;
+    color: white;
+    font-size: 13px;
+}
+.container_fluid .container .content .content_left a  .text_content .description{
+    position: absolute;
+    bottom: 18%;
+    left: 10px;
+    color: white;
+    font-size: 15px;
+} */
+.container_fluid .container .content .content_right div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .content_video{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.container .content_video .flag{
+    /* width: 10%; */
+   
+    padding: 7px 10px 7px 9px;
+    text-decoration: none;
+    background-color: red;
+    text-decoration: none;
+    /* position: relative; */
+    position: relative;
+    
+    
+}
+.container .content_video .flag::after{
+    content: "";
+  position: absolute;
+  top: 0px;
+  right: -16px;
+  border-style: solid;
+  border-width: 36px 0px 0px 20px;
+  margin-right: -4px;
+  border-color: transparent  transparent transparent red;
+  
+}
+.container .content_video .small_content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+    box-shadow:1px 2px 2px 1px rgb(0 0 0 / 20%);
+  border-top: 3px solid red;
+  
+}
+.container .content_video .small_content .top_small_content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    column-gap: 0.5%;
+    margin-bottom: 80px;
+    
+}
+.container .content_video .small_content .top_small_content div{
+    width: 100%;
+    height: 200px;
+}
+.container .content_video .small_content .top_small_content div img{
+    width: 100%;
+    height: 100%;
+}
+.container .content_video .small_content .top_small_content div p{
+    margin-right: 10px;
+    
+}
+.container .content_video .small_content .bottom_content{
+    width: 100%;
+    display: flex;
+    /* margin-top: 50px; */
+}
+.container .content_video .small_content .bottom_content .bottom_content_left{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    grid-template-rows: repeat(2, 140px);
+    row-gap: 50px;
+    column-gap: 1%;
+    position: relative;
+    /* margin-top: 80px; */
+    margin-bottom: 50px;
+    
+}
+.container .content_video .small_content .bottom_content .bottom_content_left a{
+    display: block;
+    text-decoration: none;
+}
+.container .content_video .small_content .bottom_content .bottom_content_left a div{
+    width: 100%;
+    height: 100%;
+}
+.container .content_video .small_content .bottom_content .bottom_content_left a div img{
+    width: 100%;
+    height: 100%;
+}
+.container .content_video .small_content .bottom_content .bottom_content_right{
+    width: 30%;
+}
+
+.container .content_video .small_content .bottom_content .bottom_content_left a p{
+    
+    margin-right: 5px;
+    margin-top: 5px;
+    color: black;
+}
+.container .content_video .small_content .bottom_content .bottom_content_right{
+    width: 30%;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(3, 100px);
+    row-gap: 20px;
+}
+.container .content_video .small_content .bottom_content .bottom_content_right a{
+    width: 100%;
+    height: 100%;
+}
+.container .content_video .small_content .bottom_content .bottom_content_right a img{
+    width: 100%;
+    height: 100%;
+}
+.container .content_enter{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+    position: relative;
+   
+}
+.container .small_content{
+    width: 100%;
+    display: flex;
+    padding: 15px 25px;
+    box-shadow:1px 2px 2px 1px rgb(0 0 0 / 20%);
+    border-top: 3px solid  rgb(236, 94, 118);
+}   
+.container .content_enter .flag{
+    position: relative;
+    padding: 7px 10px 7px 5px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(236, 94, 118);
+    font-weight: bold;
+}
+.container .content_enter .flag::after{
+    content: "";
+    top: 0px;
+    /* margin-right: -15px; */
+    margin-left: 10px;
+    position: absolute;
+    border-style: solid;
+    border-width: 35px 0px 0px 20px;
+    border-color: transparent transparent transparent rgb(236, 94, 118);
+}
+.container .small_content{
+    width: 100%;
+    gap: 10px;
+}
+.container .small_content .small_content_left{
+    width: 34%;
+}
+.container .small_content .small_content_left a{
+    text-decoration: none;
+    
+}
+.container .small_content .small_content_left div{
+    width: 100%;
+    height: 220px;
+}
+.container .small_content .small_content_left div img{
+    width: 100%;
+    height: 100%;
+}
+.container .small_content .small_content_left a h2{
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:  rgb(236, 94, 118);
+}
+.container .small_content .small_content_right{
+    width: 66%;
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    column-gap: 1%;
+    /* grid-template-rows: repeat(2, ); */
+}
+.container .small_content .small_content_right a{
+    text-decoration: none;
+}
+.container .small_content .small_content_right a div{
+    width: 100%;
+    height: 120px;
+}
+.container .small_content .small_content_right a div img{
+    width: 100%;
+    height: 100%;
+}
+.container .small_content .small_content_right a h2{
+    font-size: 10px;
+}
+.footer{
+    width: 100%;
+    height: 320px;
+    /* background-color: black; */
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+
+}
+
+.footer .content_footer{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.footer .content_footer .content_left_footer{
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 50px 0px;
+}
+.footer .content_footer .content_left_footer p{
+    color: white;
+}
+.footer .content_footer .content_center_footer{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0px;
+}
+.footer .content_footer .content_center_footer .socail_icon{
+    display: flex;
+}
+.footer .content_footer .content_center_footer .socail_icon a{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.footer .content_footer .content_center_footer .socail_icon a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.footer .content_footer .content_center_footer p, h1{
+    color: white;
+}
+.footer .content_footer .content_right_footer{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0px;
+    margin-left: 10px;
+}
+.footer .content_footer .content_right_footer .social_icon{
+    display: flex;
+}
+.footer .content_footer .content_right_footer .social_icon a{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.footer .content_footer .content_right_footer .social_icon a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.footer .content_footer .content_right_footer{
+    color: white;
+}
